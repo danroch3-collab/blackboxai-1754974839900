@@ -1,0 +1,810 @@
+/* ===================================
+   PORTAFOLIO ROCHA - ANIMACIONES Y EFECTOS
+   Desarrollador: Rocha
+   Descripción: Animaciones CSS3 para mejorar la experiencia de usuario
+   =================================== */
+
+/* ===================================
+   ANIMACIONES GLOBALES
+   =================================== */
+
+/* Animación de entrada suave para elementos */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación de escala suave */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animación de rotación suave */
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-10deg) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* ===================================
+   ANIMACIÓN TYPEWRITER (MÁQUINA DE ESCRIBIR)
+   =================================== */
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkCursor {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--color-secondary);
+    }
+}
+
+/* Contenedor del efecto typewriter */
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 3px solid var(--color-secondary);
+    white-space: nowrap;
+    animation: 
+        typewriter 3s steps(40, end),
+        blinkCursor 0.75s step-end infinite;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+/* Variaciones del typewriter para diferentes textos */
+.typewriter-fast {
+    animation: 
+        typewriter 2s steps(30, end),
+        blinkCursor 0.75s step-end infinite;
+}
+
+.typewriter-slow {
+    animation: 
+        typewriter 4s steps(50, end),
+        blinkCursor 0.75s step-end infinite;
+}
+
+/* ===================================
+   ANIMACIONES DE CARGA DE PÁGINA
+   =================================== */
+
+/* Animación para el header al cargar */
+.header {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+/* Animación para el contenido hero */
+.hero-text {
+    animation: fadeInLeft 1s ease-out 0.3s both;
+}
+
+.hero-image {
+    animation: fadeInRight 1s ease-out 0.5s both;
+}
+
+/* Animación para botones del hero */
+.hero-buttons .btn:nth-child(1) {
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+.hero-buttons .btn:nth-child(2) {
+    animation: fadeInUp 0.8s ease-out 1s both;
+}
+
+/* ===================================
+   ANIMACIONES DE SCROLL (INTERSECTION OBSERVER)
+   =================================== */
+
+/* Elementos que aparecen al hacer scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Variaciones de animación al scroll */
+.animate-fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.animate-fade-in.animated {
+    opacity: 1;
+}
+
+.animate-slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-out;
+}
+
+.animate-slide-left.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-slide-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease-out;
+}
+
+.animate-slide-right.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease-out;
+}
+
+.animate-scale.animated {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ===================================
+   ANIMACIONES DE BARRAS DE HABILIDADES
+   =================================== */
+
+/* Animación de las barras de progreso */
+.skill-progress {
+    width: 0 !important;
+    transition: width 1.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-progress.animated {
+    width: var(--skill-width) !important;
+}
+
+/* Efecto de brillo en las barras de habilidades */
+.skill-progress::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    animation: skillShine 2s ease-in-out;
+    animation-delay: 1s;
+}
+
+@keyframes skillShine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* ===================================
+   ANIMACIONES DE TARJETAS DE PROYECTO
+   =================================== */
+
+/* Animación de entrada escalonada para las tarjetas */
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Efecto hover mejorado para tarjetas */
+.project-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center bottom;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Animación del overlay de proyecto */
+.project-overlay {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+    backdrop-filter: blur(5px);
+}
+
+/* Animación de la imagen del proyecto */
+.project-img {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.1);
+}
+
+/* Animación del botón de ver proyecto */
+.btn-view-project {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .btn-view-project {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ===================================
+   ANIMACIONES DE FILTROS DE PROYECTO
+   =================================== */
+
+/* Animación de filtros */
+.filter-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(52, 152, 219, 0.2),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.filter-btn:hover::before,
+.filter-btn.active::before {
+    left: 100%;
+}
+
+/* Animación de aparición/desaparición de proyectos filtrados */
+.project-card.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.project-card.visible {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    pointer-events: auto;
+}
+
+/* ===================================
+   ANIMACIONES DE ESTADÍSTICAS
+   =================================== */
+
+/* Animación de conteo de números */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-number {
+    animation: countUp 0.8s ease-out;
+}
+
+/* Efecto de pulso para estadísticas */
+.stat-item:hover .stat-number {
+    animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* ===================================
+   ANIMACIONES DE FORMULARIO
+   =================================== */
+
+/* Animación de focus en inputs */
+.form-input,
+.form-textarea {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 0 0 3px rgba(52, 152, 219, 0.1),
+        0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación de etiquetas flotantes */
+.form-group {
+    position: relative;
+}
+
+.form-label {
+    transition: all 0.3s ease;
+    transform-origin: left top;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    transform: translateY(-25px) scale(0.8);
+    color: var(--color-secondary);
+}
+
+/* Animación del botón de envío */
+.btn-submit {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.btn-submit:hover::before {
+    left: 100%;
+}
+
+/* Animación de carga del botón */
+.btn-loading {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.btn-loading::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===================================
+   ANIMACIONES DE MODAL
+   =================================== */
+
+/* Animación de apertura del modal */
+.modal {
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    animation: modalSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Animación de cierre del modal */
+.modal.closing {
+    animation: modalFadeOut 0.3s ease-in;
+}
+
+.modal.closing .modal-content {
+    animation: modalSlideOut 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes modalSlideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+}
+
+/* ===================================
+   ANIMACIONES DE NAVEGACIÓN
+   =================================== */
+
+/* Animación del menú móvil */
+.navbar-menu {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-menu.active {
+    animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animación de los elementos del menú móvil */
+.navbar-menu.active .navbar-item {
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.navbar-menu.active .navbar-item:nth-child(1) { animation-delay: 0.1s; }
+.navbar-menu.active .navbar-item:nth-child(2) { animation-delay: 0.2s; }
+.navbar-menu.active .navbar-item:nth-child(3) { animation-delay: 0.3s; }
+.navbar-menu.active .navbar-item:nth-child(4) { animation-delay: 0.4s; }
+.navbar-menu.active .navbar-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* Animación del botón hamburguesa */
+.hamburger-line {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===================================
+   ANIMACIONES DE SCROLL SUAVE
+   =================================== */
+
+/* Indicador de scroll */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--gradient-primary);
+    z-index: 9999;
+    transition: width 0.1s ease-out;
+}
+
+/* Botón de scroll hacia arriba */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ===================================
+   ANIMACIONES DE PARTÍCULAS DE FONDO
+   =================================== */
+
+/* Partículas flotantes en el hero */
+.hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+}
+
+.particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+.particle:nth-child(2) { left: 20%; animation-delay: 1s; }
+.particle:nth-child(3) { left: 30%; animation-delay: 2s; }
+.particle:nth-child(4) { left: 40%; animation-delay: 3s; }
+.particle:nth-child(5) { left: 50%; animation-delay: 4s; }
+.particle:nth-child(6) { left: 60%; animation-delay: 5s; }
+.particle:nth-child(7) { left: 70%; animation-delay: 0.5s; }
+.particle:nth-child(8) { left: 80%; animation-delay: 1.5s; }
+.particle:nth-child(9) { left: 90%; animation-delay: 2.5s; }
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-100px) rotate(180deg);
+        opacity: 0.8;
+    }
+}
+
+/* ===================================
+   ANIMACIONES DE CARGA
+   =================================== */
+
+/* Spinner de carga */
+.loading-spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--color-neutral);
+    border-radius: 50%;
+    border-top-color: var(--color-secondary);
+    animation: spin 1s ease-in-out infinite;
+}
+
+/* Skeleton loading para tarjetas */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ===================================
+   ANIMACIONES PERSONALIZADAS PARA ROCHA
+   =================================== */
+
+/* Animación especial para el logo */
+.logo {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo:hover {
+    transform: rotate(5deg) scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(52, 152, 219, 0.3));
+}
+
+/* Efecto de escritura para el nombre */
+.brand-text {
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width 0.3s ease;
+}
+
+.navbar-brand:hover .brand-text::after {
+    width: 100%;
+}
+
+/* Animación de las tecnologías */
+.tech-tag {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.tech-tag:hover {
+    color: var(--color-text-light);
+    transform: translateY(-2px);
+}
+
+.tech-tag:hover::before {
+    left: 0;
+}
+
+/* ===================================
+   OPTIMIZACIÓN PARA RENDIMIENTO
+   =================================== */
+
+/* Usar transform y opacity para animaciones suaves */
+.optimized-animation {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Reducir animaciones en dispositivos de bajo rendimiento */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .typewriter {
+        animation: none !important;
+        border-right: none !important;
+    }
+    
+    .particle {
+        animation: none !important;
+    }
+}
