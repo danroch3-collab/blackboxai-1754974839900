@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta tags básicos para SEO y responsividad -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de desarrollador Python - Rocha. Especializado en Flask, Django, FastAPI y análisis de datos.">
+    <meta name="keywords" content="Python, Flask, Django, FastAPI, desarrollador, programador, web, análisis de datos">
+    <meta name="author" content="Rocha">
+    
+    <!-- Título de la página -->
+    <title>Rocha - Desarrollador Python | Portafolio Profesional</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+    
+    <!-- Google Fonts - Tipografías profesionales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Hojas de estilo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Header con navegación sticky -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <!-- Logo Rocha -->
+            <div class="navbar-brand">
+                <img src="images/logo/logo-rocha.svg" alt="Logo Rocha" class="logo">
+                <span class="brand-text">ROCHA</span>
+            </div>
+            
+            <!-- Menú de navegación -->
+            <ul class="navbar-menu" id="navbar-menu">
+                <li class="navbar-item">
+                    <a href="#inicio" class="navbar-link active">Inicio</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#sobre-mi" class="navbar-link">Sobre Mí</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#habilidades" class="navbar-link">Habilidades</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#proyectos" class="navbar-link">Proyectos</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#contacto" class="navbar-link">Contacto</a>
+                </li>
+            </ul>
+            
+            <!-- Botón hamburguesa para móviles -->
+            <div class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero - Presentación principal -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hola, soy <span class="highlight">Rocha</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        <span class="typewriter" id="typewriter"></span>
+                    </h2>
+                    <p class="hero-description">
+                        Desarrollador Python especializado en crear soluciones web robustas y eficientes. 
+                        Experto en Flask, Django, FastAPI y análisis de datos con más de 3 años de experiencia.
+                    </p>
+                    
+                    <!-- Botones de acción -->
+                    <div class="hero-buttons">
+                        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                        <a href="#contacto" class="btn btn-secondary">Contáctame</a>
+                    </div>
+                </div>
+                
+                <!-- Imagen de perfil -->
+                <div class="hero-image">
+                    <div class="profile-image-container">
+                        <img src="images/profile/profile-rocha.jpg" alt="Foto de perfil de Rocha" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section class="about" id="sobre-mi">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Mí</h2>
+                <p class="section-subtitle">Conoce mi trayectoria y pasión por el desarrollo Python</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-paragraph">
+                        Soy un desarrollador Python apasionado por crear soluciones tecnológicas innovadoras. 
+                        Mi experiencia abarca desde el desarrollo web con frameworks modernos hasta el análisis 
+                        de datos y la automatización de procesos.
+                    </p>
+                    <p class="about-paragraph">
+                        Me especializo en el desarrollo backend con <strong>Flask</strong>, <strong>Django</strong> 
+                        y <strong>FastAPI</strong>, creando APIs robustas y aplicaciones web escalables. También 
+                        tengo experiencia en análisis de datos con <strong>Pandas</strong>, <strong>NumPy</strong> 
+                        y visualización con <strong>Matplotlib</strong> y <strong>Plotly</strong>.
+                    </p>
+                    <p class="about-paragraph">
+                        Mi enfoque se centra en escribir código limpio, mantenible y bien documentado, 
+                        siguiendo las mejores prácticas de desarrollo y metodologías ágiles.
+                    </p>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3 class="stat-number">3+</h3>
+                        <p class="stat-label">Años de Experiencia</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">15+</h3>
+                        <p class="stat-label">Proyectos Completados</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">8+</h3>
+                        <p class="stat-label">Tecnologías Dominadas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades Técnicas -->
+    <section class="skills" id="habilidades">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Habilidades Técnicas</h2>
+                <p class="section-subtitle">Tecnologías y herramientas que domino</p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Backend Development -->
+                <div class="skill-category">
+                    <h3 class="category-title">Backend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Flask</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Django</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">FastAPI</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Data Analysis -->
+                <div class="skill-category">
+                    <h3 class="category-title">Análisis de Datos</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Pandas</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">NumPy</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Matplotlib</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Scikit-learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Frontend & Tools -->
+                <div class="skill-category">
+                    <h3 class="category-title">Frontend & Herramientas</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5/CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git/GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section class="projects" id="proyectos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <p class="section-subtitle">Explora mis trabajos más recientes y demos interactivos</p>
+            </div>
+            
+            <!-- Filtros de proyectos -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="api">APIs</button>
+                <button class="filter-btn" data-filter="data">Análisis de Datos</button>
+                <button class="filter-btn" data-filter="automation">Automatización</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+            </div>
+            
+            <!-- Grid de proyectos -->
+            <div class="projects-grid">
+                <!-- Proyecto 1: Flask App -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="images/projects/flask-app.jpg" alt="Aplicación Flask" class="project-img">
+                        <div class="project-overlay">
+                            <button class="btn-view-project" data-project="flask-app">Ver Detalles</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sistema de Gestión Flask</h3>
+                        <p class="project-description">
+                            Aplicación web completa desarrollada con Flask, incluyendo autenticación, 
+                            CRUD operations y panel administrativo.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">SQLAlchemy</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/flask-app/" class="project-link" target="_blank">Demo</a>
+                            <a href="https://github.com/rocha/flask-app" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2: FastAPI Demo -->
+                <div class="project-card" data-category="api">
+                    <div class="project-image">
+                        <img src="images/projects/fastapi-demo.jpg" alt="API FastAPI" class="project-img">
+                        <div class="project-overlay">
+                            <button class="btn-view-project" data-project="fastapi-demo">Ver Detalles</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">API REST con FastAPI</h3>
+                        <p class="project-description">
+                            API moderna y rápida con documentación automática, validación de datos 
+                            y autenticación JWT.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Pydantic</span>
+                            <span class="tech-tag">JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/fastapi-demo/" class="project-link" target="_blank">Demo</a>
+                            <a href="https://github.com/rocha/fastapi-demo" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3: Data Analysis -->
+                <div class="project-card" data-category="data">
+                    <div class="project-image">
+                        <img src="images/projects/data-analysis.jpg" alt="Análisis de Datos" class="project-img">
+                        <div class="project-overlay">
+                            <button class="btn-view-project" data-project="data-analysis">Ver Detalles</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Análisis de Datos Financieros</h3>
+                        <p class="project-description">
+                            Análisis completo de datos financieros con visualizaciones interactivas 
+                            y predicciones usando machine learning.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Plotly</span>
+                            <span class="tech-tag">Jupyter</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/data-analysis/" class="project-link" target="_blank">Demo</a>
+                            <a href="https://github.com/rocha/data-analysis" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 4: Automation Bot -->
+                <div class="project-card" data-category="automation">
+                    <div class="project-image">
+                        <img src="images/projects/automation-bot.jpg" alt="Bot de Automatización" class="project-img">
+                        <div class="project-overlay">
+                            <button class="btn-view-project" data-project="automation-bot">Ver Detalles</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Bot de Automatización</h3>
+                        <p class="project-description">
+                            Bot inteligente para automatización de tareas repetitivas, gestión de archivos 
+                            y notificaciones automáticas.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Selenium</span>
+                            <span class="tech-tag">Schedule</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/automation-bot/" class="project-link" target="_blank">Demo</a>
+                            <a href="https://github.com/rocha/automation-bot" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 5: ML Project -->
+                <div class="project-card" data-category="ml">
+                    <div class="project-image">
+                        <img src="images/projects/ml-project.jpg" alt="Proyecto Machine Learning" class="project-img">
+                        <div class="project-overlay">
+                            <button class="btn-view-project" data-project="ml-project">Ver Detalles</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Predictor de Precios ML</h3>
+                        <p class="project-description">
+                            Modelo de machine learning para predicción de precios inmobiliarios 
+                            con interfaz web interactiva.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/ml-project/" class="project-link" target="_blank">Demo</a>
+                            <a href="https://github.com/rocha/ml-project" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 6: Web Scraper -->
+                <div class="project-card" data-category="automation">
+                    <div class="project-image">
+                        <img src="images/projects/web-scraper.jpg" alt="Web Scraper" class="project-img">
+                        <div class="project-overlay">
+                            <button class="btn-view-project" data-project="web-scraper">Ver Detalles</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Web Scraper Avanzado</h3>
+                        <p class="project-description">
+                            Herramienta de web scraping con interfaz gráfica para extracción 
+                            y análisis de datos web en tiempo real.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">BeautifulSoup</span>
+                            <span class="tech-tag">Requests</span>
+                            <span class="tech-tag">Tkinter</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/web-scraper/" class="project-link" target="_blank">Demo</a>
+                            <a href="https://github.com/rocha/web-scraper" class="project-link" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-title">Información de Contacto</h3>
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p>rocha.dev@email.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Ubicación</h4>
+                        <p>Ciudad, País</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Disponibilidad</h4>
+                        <p>Disponible para proyectos freelance</p>
+                    </div>
+                    
+                    <!-- Enlaces a redes sociales -->
+                    <div class="social-links">
+                        <a href="https://github.com/rocha" class="social-link" target="_blank">GitHub</a>
+                        <a href="https://linkedin.com/in/rocha" class="social-link" target="_blank">LinkedIn</a>
+                        <a href="https://twitter.com/rocha_dev" class="social-link" target="_blank">Twitter</a>
+                    </div>
+                </div>
+                
+                <!-- Formulario de contacto -->
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nombre *</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                        <span class="form-error" id="name-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                        <span class="form-error" id="email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Asunto *</label>
+                        <input type="text" id="subject" name="subject" class="form-input" required>
+                        <span class="form-error" id="subject-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Mensaje *</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                        <span class="form-error" id="message-error"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                        <span class="btn-text">Enviar Mensaje</span>
+                        <span class="btn-loading" style="display: none;">Enviando...</span>
+                    </button>
+                    
+                    <!-- Mensajes de respuesta -->
+                    <div class="form-message" id="form-message" style="display: none;"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo/logo-rocha.svg" alt="Logo Rocha" class="footer-logo">
+                    <span class="footer-brand-text">ROCHA</span>
+                </div>
+                
+                <div class="footer-text">
+                    <p>&copy; 2024 Rocha. Todos los derechos reservados.</p>
+                    <p>Desarrollador Python especializado en soluciones web modernas.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#inicio" class="footer-link">Inicio</a>
+                    <a href="#sobre-mi" class="footer-link">Sobre Mí</a>
+                    <a href="#proyectos" class="footer-link">Proyectos</a>
+                    <a href="#contacto" class="footer-link">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para detalles de proyectos -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- El contenido se cargará dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/contact-form.js"></script>
+</body>
+</html>
