@@ -1,0 +1,31 @@
+# PORTAFOLIO ROCHA - FLASK APP REQUIREMENTS
+# Dependencias necesarias para la aplicación Flask de demostración
+
+# Framework principal
+Flask==2.3.3
+Werkzeug==2.3.7
+
+# Base de datos
+sqlite3  # Incluido en Python estándar
+
+# Utilidades adicionales
+Jinja2==3.1.2
+MarkupSafe==2.1.3
+itsdangerous==2.1.2
+click==8.1.7
+
+# Para desarrollo (opcional)
+python-dotenv==1.0.0
+
+# Seguridad
+bcrypt==4.0.1
+
+# Fecha y hora
+python-dateutil==2.8.2
+
+# Validación de formularios (opcional)
+WTForms==3.0.1
+Flask-WTF==1.1.1
+
+# Para producción (opcional)
+gunicorn==21.2.0
